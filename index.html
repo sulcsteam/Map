@@ -1,0 +1,49 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+    <title>GEOcoding</title>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style type="text/css">
+        html
+        {
+            height: 100%;
+        }
+        body
+        {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        #map
+        {
+            height: 100%;
+        }
+    </style>
+
+    <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyD_dLYZQ-Y4WlcQRwaycjpC-Fqyi2yY_AE&sensor=true">
+    </script>
+
+    <script type="text/javascript" language="javascript">
+        window.onload = function() {
+            GetMap();
+            //getLocation();
+        }
+
+        function GetMap() {
+            var mapOptions = {
+                center: new google.maps.LatLng(50.390198, 7.52531),
+                zoom: 8,
+                mapTypeId: google.maps.MapTypeId.ROADMAP
+            };
+            var map = new google.maps.Map(document.getElementById("map"),
+            mapOptions);
+        }
+    </script>
+
+</head>
+<body>
+<div id="map">
+        </div>
+</body>
+</html>
